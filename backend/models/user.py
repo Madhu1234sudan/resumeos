@@ -53,6 +53,11 @@ class User(Base):
     back_populates="user",
     cascade="all, delete-orphan"
     )
+    certifications = relationship(
+    "Certification",
+    back_populates="user",
+    cascade="all, delete-orphan"
+    )
     password_hash: Mapped[str] = mapped_column(
     String(255)
     )

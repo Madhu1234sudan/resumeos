@@ -29,9 +29,9 @@ from models.user import User
 from models.skill import Skill
 from models.project import Project
 from models.project_skill import ProjectSkill
+from models.certification import Certification
 
 target_metadata = Base.metadata
-
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
