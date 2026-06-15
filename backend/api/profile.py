@@ -18,6 +18,10 @@ from services.profile_service import (
     ProfileService
 )
 
+from services.profile_summary_service import (
+    ProfileSummaryService
+)
+
 
 router = APIRouter(
     prefix="/profile",
@@ -34,6 +38,20 @@ def get_profile(
 
     return ProfileService.get_profile(
         current_user
+    )
+
+
+@router.get("/summary")
+def get_profile_summary(
+    current_user: User = Depends(
+        get_current_user
+    )
+):
+
+    return (
+        ProfileSummaryService.generate_summary(
+            current_user
+        )
     )
 
 
