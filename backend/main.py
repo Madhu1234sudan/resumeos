@@ -5,9 +5,9 @@ from api.profile import router as profile_router
 from api.skill import router as skill_router
 from api.project import router as project_router
 from api.certification import router as certification_router
-from api.resume import (
-    router as resume_router
-)
+from api.resume import (router as resume_router)
+from api.jd import router as jd_router
+from api.gap import router as gap_router
 
 
 
@@ -23,6 +23,8 @@ app.include_router(skill_router)
 app.include_router(project_router)
 app.include_router(certification_router)
 app.include_router(resume_router)
+app.include_router(jd_router)
+app.include_router(gap_router)
 
 
 
